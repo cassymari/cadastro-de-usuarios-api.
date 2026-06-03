@@ -91,7 +91,11 @@ app.delete('/usuarios/:id', async (req, res) => {
 })
 
 
-app.listen(3001)
+const PORT = process.env.PORT || 3001
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`)
+})
 // req => requisição
 // res => resposta
 // http://localhost:3001
